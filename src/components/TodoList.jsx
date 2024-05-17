@@ -11,9 +11,7 @@ const TodoList = ({ todos, todoIsDone, setTodos }) => {
           .map((todo) => (
             <TodoItem
               key={todo.id}
-              todoIsDone={todoIsDone}
               todo={todo}
-              todos={todos}
               setTodos={setTodos}
             />
           ))}

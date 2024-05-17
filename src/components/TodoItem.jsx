@@ -1,41 +1,34 @@
-const TodoItem = ({ todo, todos, todoIsDone, setTodos }) => {
+const TodoItem = ({ todo, setTodos }) => {
+  const { id, title, text, isDone} = todo; // 구조분해 할당
+  
   const deleteTodo = (id) => {
-    setTodos(
-      todos.filter((todo) => {
-        return todo.id !== id;
-      })
-    );
+    setTodos((prev) =>  prev.filter(todo => todo.id !== id));
   };
 
   const toggleTodo = (id) => { 
-    setTodos(
-      todos.map((todo) => {
-          if(todo.id === id) {
-            todo.isDone = !todo.isDone;
-          }
-        return todo;
-      })
-      // todos.map((todo) =>
-      //   todo.id === id ? { ...todo, isDone: !todo.isDone } : todo
-      // )
-    );
+    setTodos((prev) =>  
+      prev.map((todo) => 
+        todo.id === id ? { ...todo, isDone: !todo.isDone } : todo
+      )
+    )
     // console.log(todos);
   };
   
   return (
     <div className="todoItem">
       <div className="todoContent">
-        <h3 className="todoTitle">{todo.title}</h3>
-        <p className="todoText">{todo.text}</p>
+        <h3 className="todoTitle">{title}</h3>
+        <p className="todoText">{text}</p>
       </div>
       <div className="buttonList">
-        <button onClick={() => deleteTodo(todo.id)}>삭제</button>
-        <button onClick={() => toggleTodo(todo.id)}>
-          {todoIsDone === false ? '완료' : '취소'}
+        <button onClick={() => deleteTodo(id)}>삭제</button>
+        <button onClick={() => toggleTodo(id)}>
+          {isDone === false ? '완료' : '취소'}
         </button>
       </div>
     </div>
   );
 };
+
 
 export default TodoItem;
