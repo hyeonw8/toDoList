@@ -21,14 +21,14 @@ const TodoContainer = () => {
   const [todos, setTodos] = useState(initialState);
 
   return (
-    <div id="wrap">
+    <section id>
       <Header />
-      <TodoForm todos={todos} setTodos={setTodos} />
-      <div className="main">
+      <TodoForm setTodos={setTodos} />
+      <div className='list'>
         <TodoList todos={todos} setTodos={setTodos} todoIsDone={false} />
         <TodoList todos={todos} setTodos={setTodos} todoIsDone={true} />
       </div>
-    </div>
+    </section>
   );
 };
 
