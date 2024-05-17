@@ -1,26 +1,6 @@
-import React from 'react';
 import TodoItem from './TodoItem';
 
 const TodoList = ({ todos, todoIsDone, setTodos }) => {
-  
-  const deleteTodo = (id) => {
-    //console.log(id);
-    setTodos(
-      todos.filter((todo) => {
-        //console.log(todo.id, id);
-        return todo.id !== id;
-      })
-    );
-  };
-
-  const changeTodo = (id) => {
-    setTodos(
-      todos.map((todo) =>
-        todo.id === id ? { ...todo, isDone: !todo.isDone } : todo
-      )
-    );
-    // console.log(todos);
-  };
   
   return (
     <>
@@ -33,8 +13,8 @@ const TodoList = ({ todos, todoIsDone, setTodos }) => {
               key={todo.id}
               todoIsDone={todoIsDone}
               todo={todo}
-              changeTodo={changeTodo}
-              deleteTodo={deleteTodo}
+              todos={todos}
+              setTodos={setTodos}
             />
           ))}
       </div>
