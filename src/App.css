@@ -1,9 +1,10 @@
 /* TodoContainer.jsx */
-#wrap {
+.layout {
   max-width: 1200px;
   width: 100%;
   height: 800px;
-  margin: 0 auto;
+  margin: 0 auto; 
+  /* 블록형 태그 같은 경우에는 margin을 이용해 가운데 정렬 */
 }
 
 .main {

@@ -1,4 +1,3 @@
-import React from 'react';
 import { useState } from 'react';
 import TodoForm from './TodoForm';
 import TodoList from './TodoList';
@@ -25,10 +24,10 @@ const TodoContainer = () => {
     <div id="wrap">
       <Header />
       <TodoForm todos={todos} setTodos={setTodos} />
-      <main className="main">
+      <div className="main">
         <TodoList todos={todos} setTodos={setTodos} todoIsDone={false} />
         <TodoList todos={todos} setTodos={setTodos} todoIsDone={true} />
-      </main>
+      </div>
     </div>
   );
 };

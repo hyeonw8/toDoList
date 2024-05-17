@@ -1,9 +1,13 @@
 import './App.css';
+import Layout from './components/Layout';
 import TodoContainer from './components/TodoContainer';
 
 function App() {
   return (
-    <TodoContainer />
+      <Layout>
+        <TodoContainer /> 
+        {/* TodoContainer가 childern */}
+      </Layout>
   );
 }
 
