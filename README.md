@@ -1,6 +1,7 @@
 #  ✨ React를 사용해 ToDo List 만들기
 
 ## 📍분리한 컴포넌트
+### Layout
 ### TodoContainer
 ### Header
 ### TodoForm
