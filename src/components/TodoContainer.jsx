@@ -21,7 +21,7 @@ const TodoContainer = () => {
   const [todos, setTodos] = useState(initialState);
 
   return (
-    <section id>
+    <section>
       <Header />
       <TodoForm setTodos={setTodos} />
       <div className='list'>

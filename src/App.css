@@ -13,6 +13,10 @@
   margin-top: 10px;
 }
 
+.list {
+  margin-left: 20px;
+}
+
 /* Header.jsx */
 .header {
   display: flex;
@@ -68,14 +72,12 @@ input {
   font-weight: bold;
   margin-bottom: 20px;
   margin-top: 20px;
-  margin-left: 20px;
 }
 
 .toDoList {
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
-  margin-left: 20px;
 }
 
 /* TodoItem.jsx */
